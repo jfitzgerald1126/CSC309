@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+    <style>
+	div {
+	    margin-bottom: 1em;
+	}
+    </style>
+</head>
+<body>
+    <h1>Sample Form</h1>
+    <form action="/submit" method="post">
+        <!-- Text Input -->
+	<div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+	</div>
+
+        <!-- Email Input -->
+	<div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+	</div>
+
+        <!-- Password Input -->
+	<div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+	</div>
+
+        <!-- Radio Buttons -->
+        <div>Gender:<br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+	</div>
+
+        <!-- Checkbox -->
+	<div>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">Subscribe to newsletter</label>
+	</div>
+
+        <!-- Dropdown (Select) -->
+	<div>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+        </select></div>
+
+        <!-- Textarea -->
+	<div>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+	</div>
+
+        <!-- Submit Button -->
+	<div>
+        <input type="submit" value="Submit">
+	</div>
+    </form>
+</body>
+</html>
