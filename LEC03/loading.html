@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Example</title>
+  <style>
+  .loader {
+    margin: auto;
+    border: 40px solid lightgrey;
+    border-radius: 50%;
+    border-top: 40px solid orange;
+    width: 160px;
+    height: 160px;
+    /* short for name duration timing-function iteration-count */ 
+    animation: spinner 4s linear infinite;
+  }
+
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  </style>
+</head>
+<body> 
+  <div class="loader"></div>
+</body> 
+</html>
