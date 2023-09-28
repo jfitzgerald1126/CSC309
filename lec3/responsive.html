@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body { 
+      padding: 0; 
+      margin: 0;
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas: 'head head'
+                             'side main'
+                             'foot foot';
+        grid-template-columns: 200px auto;
+        grid-template-rows: 80px auto 40px;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    header {
+      grid-area: head;
+      background-color: #444;
+    }
+
+    #sidebar {
+      grid-area: side;
+      background-color: #ccc;
+    }
+
+    main {
+      grid-area: main;
+      background-color: #eee;
+      padding: 0 1em;
+    }
+
+    footer {
+      grid-area: foot;
+      background-color: #444;
+      color: white;
+    }
+    
+    #sidebar, footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    /* add a media query here */
+  </style>  
+</head>
+<body> 
+<div class="container">
+  <header></header>
+  <div id="sidebar">
+    <h3>Sidebar</h3>
+    <p>I will disappear when the screen size is small enough.</p>
+  </div>
+  <main>
+    <h1>Responsive Example</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue felis vel sem dapibus,
+      at posuere leo cursus. In ac libero ac ligula mollis mollis. Integer interdum porta tincidunt. 
+      Morbi iaculis urna et accumsan interdum. In dapibus, lorem ut suscipit luctus, ipsum dui rhoncus
+      enim, sit amet rutrum tellus mi in mi. Quisque posuere turpis nec orci blandit, quis aliquam
+      libero egestas. Donec justo nulla, pharetra at justo eu, mollis convallis diam. Pellentesque
+      at viverra enim, at eleifend ex. Phasellus sit amet justo a orci molestie posuere ac id
+      magna. Cras eget sem vel lorem lacinia ultrices. Donec auctor, sapien vitae molestie mollis,
+      felis metus facilisis nunc, et ullamcorper enim ex ac nunc. Duis sollicitudin hendrerit
+      malesuada. Integer iaculis interdum nulla ac vestibulum. Integer eget diam sit amet mi
+      elementum auctor. Fusce at semper erat.</p>  
+  </main>
+  <footer>
+    CSC309, University of Toronto 
+  </footer>
+</div>
+</body> 
+</html>
